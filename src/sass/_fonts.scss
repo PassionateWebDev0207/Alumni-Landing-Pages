@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 
 @font-face {
-    font-family: 'Lato_Bold';
+    font-family: 'Lato';
+    font-weight: 600;
     src: url("../../assets/fonts/Lato-Bold.ttf");
 }
 
 @font-face {
-    font-family: 'Lato_Light';
+    font-family: 'Lato';
+    font-weight: 200;
     src: url("../../assets/fonts/Lato-Light.ttf");
 }
 
 @font-face {
-    font-family: 'Lato_Regular';
+    font-family: 'Lato';
+    font-weight: 300;
     src: url("../../assets/fonts/Lato-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'BentonSans_Bold';
+    font-family: 'BentonSans';
+    font-weight: 600;
     src: url("../../assets/fonts/BentonSans-Bold.ttf");
 }
 
@@ -26,11 +30,13 @@
 }
 
 @font-face {
-    font-family: 'BentonSans_Medium';
+    font-family: 'BentonSans';
+    font-weight: 500;
     src: url("../../assets/fonts/BentonSans-Medium.ttf");
 }
 
 @font-face {
-    font-family: 'BentonSans_Regular';
+    font-family: 'BentonSans';
+    font-weight: 300;
     src: url("../../assets/fonts/BentonSans-Regular.ttf");
 }

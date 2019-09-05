@@ -5,22 +5,149 @@
     <title>Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="navbar-custom">
-            <div class="navlogo"><img src="../assets/imgs/logo.png"/></div>
-            <div class="navitems">
-                <p class="navitem">Home</p>
-                <p class="navitem">News</p>
-                <p class="navitem">Integrations</p>
-                <p class="navitem">2017 Alumni Survey</p>
-                <p class="navitem">Contact</p>
+    <header data-jarallax data-speed="0.2" class="header jarallax">
+        <img class="jarallax-img" src="../assets/imgs/hero-back.png"/>
+        <nav class="navbar navbar-expand-lg">        
+            <div class="navbar-brand">
+                <img src="../assets/imgs/logo.png" alt="logo">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">2017 Alumni Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="ipad-intro">
+            <div class="ipad-img"><img src="../assets/imgs/ipad.png" /></div>
+            <div class="ipad-description">
+                <p>Corporate Alumni Management</p>
+                <p>Integrate Alumni in to your HR landscape, immediately transform and expand your talent supply.</p>
             </div>
         </div>
     </header>
     <div class="mainbody">
-    
+        <p class="enterprise-quiz"><a href="#">What</a> is <a href="#">EnterpriseAlumni</a> Corporate <br/>Alumni Management Platform?</p>
+        <p class="enterprise-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet urna enim, eu gravida felis rhoncus eget. Vestibulum eu condimentum libero. Nam dapibus vel arcu vel pulvinar. In aliquet at justo quis rutrum. Suspendisse potenti. Nulla tincidunt nunc ultrices ipsum convallis convallis. Duis varius, dui sit amet scelerisque tempus, enim odio semper mauris, id aliquam tortor eros ac libero. Pellentesque ultrices volutpat elit vitae mollis. Nulla erat ante, tristique ut malesuada sit amet, pharetra fermentum neque. </p>
+        <div class="enterprise-properties">
+            <div class="enterprise-property integrations">
+                <p class="property-title">Integration</p>
+                <p class="property-content">EnterpriseAlumni is a customizable corporate Alumni platform to manage your Alumni and Retiree community integrated into your existing HR and business systems. An easy to setup and manage platform to maintain up-to-date contact information and a simple way to engage and create a strong Alumni Community.</p>
+            </div>
+            <div class="enterprise-property engagement">
+                <p class="property-title">Engagement</p>
+                <p class="property-content">The platform provides company Alumni with a number of engaging features including content, access to employees, discount offers, events, marketplace, directory, learning and so much more. The platform provides a single interface for Alumni to maintain evergreen information, interest in returning to work and a host of other features including content, volunteer programs and continued education.</p>
+            </div>
+            <div class="enterprise-property communication">
+                <p class="property-title">Communication</p>
+                <p class="property-content">Organizations can maintain a comprehensive profile of Alumni which can be integrated into internal recruitment to quickly search, identify and contact potential recruits against open requisitions, send contextual and relevant communications and deliver value for both the enterprise and the Alumni.</p>
+            </div>
+        </div>
+        <div class="video-panel">
+            <div class="video-player">
+                <p class="video-lnktext">
+                    Quickly expand your talent pools with candidates willing to return and are already familiar with your company. 
+                    <a href="#">Watch introduction below to learn more.</a>
+                </p>
+                <img src="../assets/imgs/video-player.png" />
+            </div>
+            <div class="idevices">
+                <img src="../assets/imgs/idevice.png"/>
+            </div>
+        </div>
+        <div class="why-panel">
+            <div class="container">
+                <p class="why-text"><a href="#">Why</a> does your organization need the <a href="#">EnterpriseAlumni</a> <br/>Corporate Alumni Management Platform?</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 item-category text-right">For the Alumni</div>
+                    <div class="col-lg-9 col-md-8 col-sm-12 col-12 item-contents">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 border-left item">
+                                <span class="item-title">Intelligence</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">News</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Events</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Search</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 item-category text-right item">For the Alumni</div>
+                    <div class="col-lg-9 col-md-8 col-sm-12 col-12 item-contents">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 border-left item">
+                                <span class="item-title">Intelligence</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">News</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Events</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Search</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 item-category text-right item">For the Alumni</div>
+                    <div class="col-lg-9 col-md-8 col-sm-12 col-12 item-contents">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 border-left item">
+                                <span class="item-title">Intelligence</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">News</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Events</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12 item">
+                                <span class="item-title">Search</span><br/>
+                                <span class="item-content">to only show the content and information that matters to the individual Alumni.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
+        </div>
     </div>
     <footer class="footer">
         <p class="copyright">
