@@ -1,24 +1,29 @@
 import 'bootstrap'
 import './sass/main.scss'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 $(document).ready(function() {
-	var icon = $(".navbar-toggler-icon");
-	var navbar = $(".navbar");
-	$(icon).on("click", function() {
-		setInterval(function() {
-			if ($(".navbar .navbar-collapse").hasClass("show")) {
-				var position = navbar.offset();
-				navbar.css("position", "absolute");
-				navbar.css("top", position.top);
-				$(window).on("scroll", function() {
-					if ($(document).scrollTop() < navbar.position().top) {
-						navbar.css("top", $(document).scrollTop());
-					}
-				});
-			} else {
-				navbar.css("position", "fixed");
-				navbar.css("top", 0);
+	var owl = $('.owl-carousel');
+	owl.owlCarousel({
+		loop:true,
+		margin:10,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:5
+			},
+			1200:{
+				items:10
 			}
-		}, 0);
+		}
 	});
-});
+	$("#carousel-next").click(function(){
+		owl.trigger('next.owl.carousel');
+	})
+	$("#carousel-prev").click(function(){
+		owl.trigger('prev.owl.carousel');
+	})
+})
