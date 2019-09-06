@@ -31,6 +31,9 @@ p {
         width: 100%;
         padding: 27px 40px;
         height: 100px;
+        @media all and (max-width: 375px) {
+            padding: 27px 10px;
+        }
     }
     .nav-link {
         color: white;
@@ -151,13 +154,13 @@ p {
             }
         }
         .integrations {
-            background-image: url(../../assets/imgs/integrations.png);
+            background-image: url(../assets/imgs/integrations.png);
         }
         .engagement {
-            background-image: url(../../assets/imgs/engagement.png);
+            background-image: url(../assets/imgs/engagement.png);
         }
         .communication {
-            background-image: url(../../assets/imgs/communication.png);
+            background-image: url(../assets/imgs/communication.png);
         }
 
         @media all and (max-width: 1200px) {
@@ -211,7 +214,7 @@ p {
     }
 
     .why-panel {
-        background-image: url(../../assets/imgs/whypanel.png);
+        background-image: url(../assets/imgs/whypanel.png);
         background-size: cover;
         background-position: center center;
         color: white;
@@ -345,6 +348,81 @@ p {
         }
         .img-adobe {
             width: 97px;
+        }
+    }
+    .who-quiz {
+        font-weight: 500;
+        font-size: 32px;
+        text-align: center;
+        margin: 50px auto 20px auto;
+    }
+    .company-ads {
+        margin-bottom: 50px;
+    }
+    .company-ad {
+        width: 100%;
+        padding: 0px 105px 0px 105px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 50px;
+    
+        .company-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            .company-logo {
+                width: 60%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            .divider {
+                width: 100%;
+                height: 3px;
+                background-color: lightgrey;
+                margin: 55px 0;
+            }
+            .company-description {
+                display: flex;
+                justify-content: flex-start;
+                img {
+                    margin-right: 10px;
+                    margin-top: -20px;
+                }
+                .text {
+                    position: relative;
+                    font-size: 26px;
+                    font-weight: 500;
+                    color: black;
+                    img {
+                        position: absolute;
+                        bottom: -5px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .company-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    
+        @media all and (max-width: 1024px) {
+            padding: 0px 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 60px;
+            grid-column-gap: 0;
         }
     }
 }

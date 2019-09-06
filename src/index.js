@@ -8,6 +8,7 @@ $(document).ready(function() {
 	owl.owlCarousel({
 		loop:true,
 		margin:10,
+		autoplay: true,
 		responsive:{
 			0:{
 				items:1
