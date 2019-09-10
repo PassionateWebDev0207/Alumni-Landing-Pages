@@ -17,16 +17,41 @@ p {
     z-index: -1;
 }
 
-.stickynav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: black !important;
-    background-color: white;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+.container-ext {
+    @media all and (min-width: 1800px) {
+        max-width: 1500px !important;
+    }
+    @media all and (min-width: 1920px) {
+        max-width: 1600px !important;
+    }
 }
 
 .header {
+    min-height: 100vh;
+    z-index: 999999 !important;
+    #scrollnav {
+        visibility: hidden;
+        z-index: -9;
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: black !important;
+        background-color: white;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+        .navbar-brand .logo-image {
+            height: 45px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+        .nav-link {
+            color: black !important;
+        }
+        .navbar-nav {
+            background-color: white !important;
+        }
+    }
+
     .navbar {
         width: 100%;
         padding: 27px 40px;
@@ -46,16 +71,21 @@ p {
         color: white;
         cursor: pointer;
     }
+    .navbar-nav {
+        background-color: transparent;
+        @media all and (max-width: 991px) {
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
     .ipad-intro {
-        padding: 0 200px 60px 200px;
         display: flex;
         justify-content: center;
         align-content: center;
         width: 100%;
+        min-height: calc(100vh - 100px);
 
         .ipad-img {
             width: 50%;
-            margin-right: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -66,20 +96,18 @@ p {
             }
         }
         .ipad-description {
+            padding-left: 20px;
             width: 50%;
             display: flex;
             flex-direction: column;
             color: white;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             
             :nth-child(1) {
                 font-weight: 600;
                 font-size: 82px;
                 @media all and (max-width: 1368px) {
-                    font-size: 60px;
-                }
-                @media all and (max-width: 768px) {
                     font-size: 48px;
                 }
             }
@@ -87,9 +115,12 @@ p {
                 font-weight: 300;
                 font-size: 30px;
             }
+            @media all and (max-width: 768px) {
+                align-items: center;
+                padding-left: 0;
+            }
         }
-        @media all and (max-width: 1366px) {
-            padding: 0 50px 60px 50px;
+        @media all and (max-width: 768px) {
             flex-direction: column;
             .ipad-img {
                 width: 100%;
@@ -116,22 +147,21 @@ p {
 
     .enterprise-answer {
         margin: 0 auto;
-        max-width: 1225px;
-        padding: 20px;
         margin-top: 40px;
         font-weight: 300;
         font-size: 22px;
     }
 
     .enterprise-properties {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
         margin-top: 100px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
         .enterprise-property {
-            width: 33%;
+            width: 100%;
             height: 400px;
             padding: 0 40px;
             display: flex;
@@ -143,7 +173,7 @@ p {
 
             .property-title {
                 font-weight: 500;
-                font-size: 42px;
+                font-size: 36px;
                 @media all and (max-width: 576px) {
                     font-size: 30px;
                 } 
@@ -163,9 +193,11 @@ p {
             background-image: url(../assets/imgs/communication.png);
         }
 
-        @media all and (max-width: 1200px) {
-            flex-direction: column;
-            justify-content: flex-start;
+        @media all and (max-width: 1024px) {
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 10px;
             .enterprise-property {
                 width: 100%;
                 margin-bottom: 5px;
@@ -175,7 +207,7 @@ p {
 
     .video-panel {
         width: 100%;
-        padding: 80px 50px 50px 50px;
+        padding: 80px 0 50px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -211,7 +243,7 @@ p {
         }
 
         @media all and (max-width: 768px) {
-            padding: 40px 15px 15px 15px;
+            padding: 40px 0 15px 0;
             flex-direction: column;
             .video-player {
                 width: 100%;
@@ -238,9 +270,6 @@ p {
                 margin: 25px 0;
                 border-left: solid 1px rgb(35, 145, 184) !important;
             }
-        }
-        .container {
-            max-width: 90% !important;
         }
         .why-text {
             margin-bottom: 55px;
@@ -285,7 +314,6 @@ p {
     .which-text {
         font-size:  34px;
         font-weight: 500;
-        margin: 0;
         text-align: center;
         margin-top: 80px;
     }
@@ -294,7 +322,6 @@ p {
         text-align: center;
         font-size: 19px;
         font-weight: 300;
-        margin: 0 10%;
         margin-top: 60px;
     }
 
@@ -318,27 +345,8 @@ p {
             overflow: hidden;
         }
     }
-    .learnmore-container {
-        margin-top: 60px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .learnmore-btn {
-            font-weight: 300;
-            font-size: 22px;
-            background-color: transparent;
-            color: rgb(90, 199, 238);
-            width: 200px;
-            height: 50px;
-            border: solid 2px rgb(90, 199, 238);
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    }
     .carousel-area {
         margin-top: 60px;
-        padding: 10px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -363,85 +371,106 @@ p {
             justify-content: center;
             align-items: center;
         }
-        .img-adobe {
-            width: 97px;
+    }
+    
+    .learnmore-container {
+        margin-top: 60px;
+        margin-bottom: 75px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .learnmore-btn {
+            font-weight: 300;
+            font-size: 22px;
+            background-color: transparent;
+            color: rgb(5, 166, 230);
+            width: 200px;
+            height: 50px;
+            border: solid 2px rgb(5, 166, 230);
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
-    .who-quiz {
-        font-weight: 500;
-        font-size: 32px;
-        text-align: center;
-        margin: 150px auto 30px auto;
-    }
-    .company-ads {
-        margin-bottom: 50px;
-    }
-    .company-ad {
-        margin-bottom: 160px;
-        width: 100%;
-        padding: 0px 105px 0px 105px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        grid-column-gap: 50px;
-    
-        .company-intro {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            .company-logo {
-                width: 60%;
-                object-fit: cover;
-                overflow: hidden;
-            }
-            .divider {
-                width: 100%;
-                height: 3px;
-                background-color: lightgrey;
-                margin: 55px 0;
-            }
-            .company-description {
+
+    .ads-panel {
+        padding: 75px 0 50px 0;
+        margin-bottom: 55px;
+        background-color: #f3f3f5;
+        .who-quiz {
+            font-weight: 500;
+            font-size: 32px;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .company-ads {
+            margin-bottom: 50px;
+        }
+        .company-ad {
+            margin-bottom: 160px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-column-gap: 50px;
+        
+            .company-intro {
                 display: flex;
-                justify-content: flex-start;
-                img {
-                    margin-right: 10px;
-                    margin-top: -20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                .company-logo {
+                    width: 60%;
+                    object-fit: cover;
+                    overflow: hidden;
                 }
-                .text {
-                    position: relative;
-                    font-size: 26px;
-                    font-weight: 500;
-                    color: black;
+                .divider {
+                    width: 100%;
+                    height: 3px;
+                    background-color: lightgrey;
+                    margin: 55px 0;
+                }
+                .company-description {
+                    display: flex;
+                    justify-content: flex-start;
                     img {
-                        position: absolute;
-                        bottom: -5px;
-                        margin-left: 10px;
+                        margin-right: 10px;
+                        margin-top: -20px;
+                    }
+                    .text {
+                        position: relative;
+                        font-size: 26px;
+                        font-weight: 500;
+                        color: black;
+                        img {
+                            position: absolute;
+                            bottom: -5px;
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
-        }
-        .company-img {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            img {
-                width: 100%;
-                object-fit: cover;
-                overflow: hidden;
+            .company-img {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
             }
-        }
-    
-        @media all and (max-width: 1024px) {
-            padding: 0px 10px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-row-gap: 60px;
-            grid-column-gap: 0;
-            margin-bottom: 80px;
+        
+            @media all and (max-width: 1024px) {
+                padding: 0px 10px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-column-gap: 0;
+            }
         }
     }
 
@@ -454,7 +483,6 @@ p {
     }
     .otherprod-imgs {
         margin-bottom: 100px;
-        padding: 0 7%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -471,7 +499,7 @@ p {
             .ad-marketplace-visit {
                 width: 75%;
                 height: 100%;
-                padding-left: 3%;
+                padding: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -500,13 +528,25 @@ p {
                 }
                 .ad-marketplace-visit-quiz {
                     font-family: 'BentonSans_Book';
-                    font-size: 30px;
+                    font-size: 24px;
                     color: white;
+                    margin: 0;
+
                     @media all and (max-width: 1440px) {
                         font-size: 24px;
                     }
+                    @media all and  (max-width: 490px) {
+                        text-align: center;
+                    }
                 }
-                
+                @media all and (max-width: 490px) {
+                    padding: 3%;
+                    width: 100%;
+                    align-items: center;
+                    .ad-marketplace-visit-alumni {
+                        justify-content: center;
+                    }
+                }
             }
             .ad-marketplace-ipad {
                 width: 25%;
@@ -517,12 +557,15 @@ p {
                     overflow: hidden;
                     z-index: 99;
                 }
+                @media all and (max-width: 490px) {
+                    display: none;
+                }
             }
         }
         .ad-gigs {
             position: relative;
             width: 48%;
-            background-color: lightgrey;
+            background-color: #f3f3f5;
             background-size: cover;
             background-position: center center;
             height: 267px;
@@ -552,7 +595,7 @@ p {
                 font-weight: 300;
                 font-size: 17px;
                 color: white;
-                background-color: rgb(35, 181, 233);
+                background-color: rgb(5, 166, 230);
                 margin-top: -50px;
                 margin-left: calc(50% - 115px);
                 z-index: 2;
@@ -579,6 +622,10 @@ p {
                             width: 100%;
                         }
                     }
+                    @media all and (max-width: 490px) {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
                 }
                 .gigs-text {
                     width: 60%;
@@ -590,10 +637,24 @@ p {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    p {
+                    >p {
                         width: 80%;
                         margin: 0;
                     }
+                    @media all and (max-width: 490px) {
+                        width: 100%;
+                        border-left: none;
+                        >p {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                @media all and (max-width: 490px) {
+                    padding-top: 20px;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
                 }
             }
         }
@@ -612,9 +673,10 @@ p {
         }
     }
     .contact-panel {
-        padding: 125px 50px;
+        padding: 125px 0;
         .contact-left {
-            padding: 40px 50px;
+            padding: 40px 0;
+            padding-right: 40px;
             border-right: solid 2px white;
             p {
                 margin: 0;
@@ -623,7 +685,7 @@ p {
                 font-weight: 500;
                 font-size: 46px;
             }
-            @media all and (max-width: 768px) {
+            @media all and (max-width: 1024px) {
                 padding: 0;
                 padding-bottom: 20px;
                 border-right: none;
@@ -635,7 +697,8 @@ p {
             }
         }
         .contact-right {
-            padding: 40px 65px;
+            padding: 40px 0;
+            padding-left: 40px;
             .input-container {
                 max-width: 425px;
                 width: 100%;
@@ -663,11 +726,11 @@ p {
                     border-radius: 4px;
                     font-weight: 300;
                     font-size: 20px;
-                    background-color: rgb(35, 181, 233);
+                    background-color: rgb(5, 166, 230);
                     cursor: pointer;
                 }
             }
-            @media all and (max-width: 768px) {
+            @media all and (max-width: 1024px) {
                 padding: 0;
                 padding-top: 20px;
                 display: flex;
@@ -675,8 +738,8 @@ p {
                 align-items: center;
             }
         }
-        @media all and (max-width: 768px) {
-            padding: 50px 50px;
+        @media all and (max-width: 1024px) {
+            padding: 50px 0;
         }
     }
     .proud-panel {

@@ -10,9 +10,9 @@
 <body>
     <header data-jarallax data-speed="0.2" class="header jarallax">
         <img class="jarallax-img" src="./assets/imgs/hero-back.png"/>
-        <nav class="navbar navbar-expand-lg" id="mynavbar">        
+        <nav class="navbar navbar-expand-lg" id="originnav">        
             <div class="navbar-brand">
-                <img src="./assets/imgs/logo.png" alt="logo">
+                <img class="logo-image" src="./assets/imgs/logo.png" alt="logo">
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
@@ -37,17 +37,44 @@
                 </ul>
             </div>
         </nav>
-        <div class="ipad-intro">
+        <nav class="navbar navbar-expand-lg" id="scrollnav">        
+            <div class="navbar-brand">
+                <img class="logo-image" src="./assets/imgs/img-logo-sticky.png" alt="logo">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse1" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" style="color:black;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">2017 Alumni Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container container-ext ipad-intro">
             <div class="ipad-img"><img src="./assets/imgs/ipad.png" /></div>
             <div class="ipad-description">
-                <p>Corporate Alumni Management</p>
+                <p>Corporate <br/>Alumni <br/>Management</p>
                 <p>Integrate Alumni in to your HR landscape, immediately transform and expand your talent supply.</p>
             </div>
         </div>
     </header>
     <div class="mainbody">
-        <p class="enterprise-quiz"><a href="#">What</a> is <a href="#">EnterpriseAlumni</a> Corporate <br/>Alumni Management Platform?</p>
-        <p class="enterprise-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet urna enim, eu gravida felis rhoncus eget. Vestibulum eu condimentum libero. Nam dapibus vel arcu vel pulvinar. In aliquet at justo quis rutrum. Suspendisse potenti. Nulla tincidunt nunc ultrices ipsum convallis convallis. Duis varius, dui sit amet scelerisque tempus, enim odio semper mauris, id aliquam tortor eros ac libero. Pellentesque ultrices volutpat elit vitae mollis. Nulla erat ante, tristique ut malesuada sit amet, pharetra fermentum neque. </p>
+        <p class="container container-ext enterprise-quiz"><a href="#">What</a> is <a href="#">EnterpriseAlumni</a> Corporate <br/>Alumni Management Platform?</p>
+        <p class="container container-ext enterprise-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet urna enim, eu gravida felis rhoncus eget. Vestibulum eu condimentum libero. Nam dapibus vel arcu vel pulvinar. In aliquet at justo quis rutrum. Suspendisse potenti. Nulla tincidunt nunc ultrices ipsum convallis convallis. Duis varius, dui sit amet scelerisque tempus, enim odio semper mauris, id aliquam tortor eros ac libero. Pellentesque ultrices volutpat elit vitae mollis. Nulla erat ante, tristique ut malesuada sit amet, pharetra fermentum neque. </p>
         <div class="enterprise-properties">
             <div class="enterprise-property integrations">
                 <p class="property-title">Integration</p>
@@ -62,7 +89,7 @@
                 <p class="property-content">Organizations can maintain a comprehensive profile of Alumni which can be integrated into internal recruitment to quickly search, identify and contact potential recruits against open requisitions, send contextual and relevant communications and deliver value for both the enterprise and the Alumni.</p>
             </div>
         </div>
-        <div class="video-panel">
+        <div class="container container-ext video-panel">
             <div class="video-player">
                 <p class="video-lnktext">
                     Quickly expand your talent pools with candidates willing to return and are already familiar with your company. 
@@ -78,7 +105,7 @@
         </div>
         <div data-jarallax data-speed="0.2" class="why-panel jarallax">
             <img class="jarallax-img" src="./assets/imgs/whypanel.png"/>
-            <div class="container">
+            <div class="container container-ext">
                 <p class="why-text"><a href="#">Why</a> does your organization need the <a href="#">EnterpriseAlumni</a> <br/>Corporate Alumni Management Platform?</p>
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-12 col-12 item-category text-right">For the Alumni</div>
@@ -154,11 +181,11 @@
             </div>
         </div>
 
-        <p class="which-text"><a href="#">Which</a> applications does <a href="#">EnterpriseAlumni</a> Corporate Alumni<br/> Management Platform integrate with?</p>
-        <p class="which-text-ans">The Alumni platform has built in integrations to interface directly with the suite HR Applications including SAP, SuccessFactors, Oracle Taleo, Workday and more. In addition the solution also includes direct integrations to a number of the tools and applications our customers wish to extend into the Alumni Community ranging from content to social to CRM. EnterpriseAlumni has a restful API to allow Alumni data to be queried and embedded within 3rd party applications</p>
-        <p class="aaas"><a href="#">Alumni</a> as a <a href="#">Service</a> (AaaS)</p>
-        <div class="aaas-img"><img src="./assets/imgs/AaaS.png" /></div>
-        <div class="carousel-area">
+        <p class="container container-ext which-text"><a href="#">Which</a> applications does <a href="#">EnterpriseAlumni</a> Corporate Alumni<br/> Management Platform integrate with?</p>
+        <p class="container container-ext which-text-ans">The Alumni platform has built in integrations to interface directly with the suite HR Applications including SAP, SuccessFactors, Oracle Taleo, Workday and more. In addition the solution also includes direct integrations to a number of the tools and applications our customers wish to extend into the Alumni Community ranging from content to social to CRM. EnterpriseAlumni has a restful API to allow Alumni data to be queried and embedded within 3rd party applications</p>
+        <p class="container container-ext aaas"><a href="#">Alumni</a> as a <a href="#">Service</a> (AaaS)</p>
+        <div class="container container-ext aaas-img"><img src="./assets/imgs/AaaS.png" /></div>
+        <div class="container container-ext carousel-area">
             <button id="carousel-prev"><i class="fa fa-angle-left"></i></button>
             <div id="brand-carousel" class="owl-carousel owl-theme">
                 <div class="item"><img src="./assets/logos/icon-adobe.png"/></div>
@@ -172,68 +199,71 @@
             </div>
             <button id="carousel-next"><i class="fa fa-angle-right"></i></button>
         </div>
-        <div class="learnmore-container"><button class="learnmore-btn">Learn more&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button></div>
-        <p class="who-quiz"><a href="#">Who?</a> See which of the worlds leading organizations choose <br /><a href="#">Enterprise</a> Alumni Corporate Alumni Management.</p>
-        <div class="company-ads carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="company-ad">
-                        <div class="company-intro">
-                            <img class="company-logo" src="./assets/imgs/logo-1.png" />
-                            <div class="divider"></div>
-                            <div class="company-description">
-                                <span><img src="./assets/imgs/semicolon-1.png"/></span>
-                                <p class="text">
-                                    EnterpriseJungle's platform strongly supports us in strengthening our relationships with our former employees
-                                    <span><img src="./assets/imgs/semicolon-2.png"/></span>
-                                </p>
+        <div class="container container-ext learnmore-container"><button class="learnmore-btn">Learn more&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button></div>
+        <div class="ads-panel">
+            <p class="container container-ext who-quiz"><a href="#">Who?</a> See which of the worlds leading organizations choose <br /><a href="#">Enterprise</a> Alumni Corporate Alumni Management.</p>
+            <div class="container container-ext company-ads carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="company-ad">
+                            <div class="company-intro">
+                                <img class="company-logo" src="./assets/imgs/logo-1.png" />
+                                <div class="divider"></div>
+                                <div class="company-description">
+                                    <span><img src="./assets/imgs/semicolon-1.png"/></span>
+                                    <p class="text">
+                                        EnterpriseJungle's platform strongly supports us in strengthening our relationships with our former employees
+                                        <span><img src="./assets/imgs/semicolon-2.png"/></span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="company-img">
-                            <img src="./assets/imgs/side-1.png" />
+                            <div class="company-img">
+                                <img src="./assets/imgs/side-1.png" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="company-ad">
-                        <div class="company-intro">
-                            <img class="company-logo" src="./assets/imgs/logo-2.png" style="width: 20%" />
-                            <div class="divider"></div>
-                            <div class="company-description">
-                                <span><img src="./assets/imgs/semicolon-1.png"/></span>
-                                <p class="text">
-                                    SAP had a seamless and successful experience collaborating with our innovative and agile partner EnterpriseAlumni
-                                    <span><img src="./assets/imgs/semicolon-2.png"/></span>
-                                </p>
+                    <div class="carousel-item">
+                        <div class="company-ad">
+                            <div class="company-intro">
+                                <img class="company-logo" src="./assets/imgs/logo-2.png" style="width: 20%" />
+                                <div class="divider"></div>
+                                <div class="company-description">
+                                    <span><img src="./assets/imgs/semicolon-1.png"/></span>
+                                    <p class="text">
+                                        SAP had a seamless and successful experience collaborating with our innovative and agile partner EnterpriseAlumni
+                                        <span><img src="./assets/imgs/semicolon-2.png"/></span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="company-img">
-                            <img src="./assets/imgs/side-2.png" />
+                            <div class="company-img">
+                                <img src="./assets/imgs/side-2.png" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="company-ad">
-                        <div class="company-intro">
-                            <img class="company-logo" src="./assets/imgs/logo-3.png" style="width: 20%" />
-                            <div class="divider"></div>
-                            <div class="company-description">
-                                <span><img src="./assets/imgs/semicolon-1.png"/></span>
-                                <p class="text">
-                                    EnterpriseJungle's platform strongly supports us in strengthening our relationships with our former employees<span>
-                                    <img src="./assets/imgs/semicolon-2.png"/></span>
-                                </p>
+                    <div class="carousel-item">
+                        <div class="company-ad">
+                            <div class="company-intro">
+                                <img class="company-logo" src="./assets/imgs/logo-3.png" style="width: 20%" />
+                                <div class="divider"></div>
+                                <div class="company-description">
+                                    <span><img src="./assets/imgs/semicolon-1.png"/></span>
+                                    <p class="text">
+                                        EnterpriseJungle's platform strongly supports us in strengthening our relationships with our former employees<span>
+                                        <img src="./assets/imgs/semicolon-2.png"/></span>
+                                    </p>
+                                </div>
                             </div>
+                            <div class="company-img">
+                                <img src="./assets/imgs/side-3.png" />
+                            </div> 
                         </div>
-                        <div class="company-img">
-                            <img src="./assets/imgs/side-3.png" />
-                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-        <p class="other-product">Other <a href="#">Products & Services</a></p>
-        <div class="otherprod-imgs">
+        
+        <p class="container container-ext other-product">Other <a href="#">Products & Services</a></p>
+        <div class="container container-ext otherprod-imgs">
             <div class="ad-marketplace">
                 <div class="ad-marketplace-visit">
                     <p class="ad-marketplace-visit-quiz">Are you a brand looking to sell into 1.5m+ corporate professionals?</p>
@@ -258,21 +288,23 @@
         </div>
         <div class="contact-panel jarallax" data-jarallax data-speed="0.2">
             <img class="jarallax-img" src="./assets/imgs/control-panel.png"/>
-            <div class="row">
-                <div class="col-md-6 col-sm-12 contact-left"><p>Schedule a demo, <br/>access info sheets.<br/> or get more information</p></div>
-                <div class="col-md-6 col-sm-12 contact-right">
-                    <div class="input-container">
-                        <input class="contact-input" placeholder="Name"></input>
-                        <input class="contact-input" placeholder="Email"></input>
-                        <input class="contact-input" placeholder="Phone"></input>
-                        <input class="contact-input" placeholder="Organization"></input><br/>
-                        <button class="contact-btn">&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></buutton>
+            <div class="container container-ext">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 contact-left"><p>Schedule a demo, <br/>access info sheets.<br/> or get more information</p></div>
+                    <div class="col-lg-6 col-md-12 contact-right">
+                        <div class="input-container">
+                            <input class="contact-input" placeholder="Name"></input>
+                            <input class="contact-input" placeholder="Email"></input>
+                            <input class="contact-input" placeholder="Phone"></input>
+                            <input class="contact-input" placeholder="Organization"></input><br/>
+                            <button class="contact-btn">&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></buutton>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <p class="proud-panel">EnterpriseAlumni is proud to be:</p>
-        <div class="sap-imgs">
+        <p class="container container-ext proud-panel">EnterpriseAlumni is proud to be:</p>
+        <div class="container container-ext sap-imgs">
            <img src="./assets/imgs/img-sappartner.png"/>
            <img src="./assets/imgs/img-consultingpartner.png"/>
            <img src="./assets/imgs/img-alumnileaders.png"/>
