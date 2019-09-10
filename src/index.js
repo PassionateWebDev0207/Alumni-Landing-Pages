@@ -7,19 +7,11 @@ $(document).ready(function() {
 	var owl = $('.owl-carousel');
 	owl.owlCarousel({
 		loop:true,
-		margin:10,
+		margin: 30,
 		autoplay: true,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:5
-			},
-			1200:{
-				items:10
-			}
-		}
+		autoplayHoverPause: true,
+		autoWidth: true,
+		items: 7,
 	});
 	$("#carousel-next").click(function(){
 		owl.trigger('next.owl.carousel');

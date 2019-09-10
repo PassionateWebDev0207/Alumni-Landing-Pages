@@ -2,6 +2,10 @@ p {
     margin: 0;
 }
 
+.lightblue {
+    color: rgb(35, 181, 233) !important;
+}
+
 .jarallax {
     position: relative;
     z-index: 0;
@@ -18,6 +22,9 @@ p {
 }
 
 .container-ext {
+    @media all and (min-width: 1600px) {
+        max-width: 1400px !important;
+    }
     @media all and (min-width: 1800px) {
         max-width: 1500px !important;
     }
@@ -36,6 +43,8 @@ p {
         position: fixed;
         top: 0;
         width: 100%;
+        height: 70px;
+
         color: black !important;
         background-color: white;
         box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
@@ -45,6 +54,7 @@ p {
             overflow: hidden;
         }
         .nav-link {
+            padding: 0 20px !important;
             color: black !important;
         }
         .navbar-nav {
@@ -54,13 +64,14 @@ p {
 
     .navbar {
         width: 100%;
-        padding: 27px 40px;
+        padding: 10px 40px;
         height: 100px;
         @media all and (max-width: 375px) {
-            padding: 27px 10px;
+            padding: 10px 10px;
         }
     }
     .nav-link {
+        padding: 0 20px !important;
         color: white;
         font-family: 'Lato';
         font-weight: 600;
@@ -78,14 +89,14 @@ p {
         }
     }
     .ipad-intro {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
         width: 100%;
         min-height: calc(100vh - 100px);
 
         .ipad-img {
-            width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -96,18 +107,16 @@ p {
             }
         }
         .ipad-description {
-            padding-left: 20px;
-            width: 50%;
             display: flex;
             flex-direction: column;
-            color: white;
             justify-content: center;
             align-items: flex-start;
-            
+
+            color: white;
             :nth-child(1) {
                 font-weight: 600;
                 font-size: 82px;
-                @media all and (max-width: 1368px) {
+                @media all and (max-width: 1440px) {
                     font-size: 48px;
                 }
             }
@@ -115,23 +124,9 @@ p {
                 font-weight: 300;
                 font-size: 30px;
             }
-            @media all and (max-width: 768px) {
-                align-items: center;
-                padding-left: 0;
-            }
         }
-        @media all and (max-width: 768px) {
-            flex-direction: column;
-            .ipad-img {
-                width: 100%;
-                margin-bottom: 100px;
-            }
-            .ipad-description {
-                width: 100%;
-                p {
-                    text-align: center;
-                }
-            }
+        @media all and (max-width: 1600px) {
+            grid-column-gap: 50px;
         }
     }
 }
@@ -150,6 +145,7 @@ p {
         margin-top: 40px;
         font-weight: 300;
         font-size: 22px;
+        text-align: justify;
     }
 
     .enterprise-properties {
@@ -208,15 +204,19 @@ p {
     .video-panel {
         width: 100%;
         padding: 80px 0 50px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 40px;
         .video-player {
-            width: 50%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
             .video-lnktext {
                 margin: 0;
                 font-weight: 500;
-                font-size: 34px;
+                font-size: 29px;
             }
             video {
                 width: 100%;
@@ -226,6 +226,7 @@ p {
                 -moz-background-size:cover;
                 -o-background-size:cover;
                 background-size:cover;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
             }
             img {                    
                 object-fit: cover;
@@ -234,7 +235,9 @@ p {
             }
         }
         .idevices {
-            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img {                    
                 object-fit: cover;
                 overflow: hidden;
@@ -301,12 +304,12 @@ p {
         }
         .item-contents {
             .item-title {
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 24px;
             }
             .item-content {
-                font-weight: 200;
-                font-size: 14px;
+                font-weight: 300;
+                font-size: 15px;
             }
         }
     }
@@ -315,21 +318,26 @@ p {
         font-size:  34px;
         font-weight: 500;
         text-align: center;
-        margin-top: 80px;
+        margin-top: 75px;
     }
 
     .which-text-ans {
-        text-align: center;
-        font-size: 19px;
+        letter-spacing: 0px;
+        line-height: 27px;
+        text-align: justify;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        font-size: 18px;
         font-weight: 300;
-        margin-top: 60px;
+        margin-top: 50px;
+        max-width: 1224px !important;
     }
 
     .aaas {
         font-weight: 500;
         font-size: 24px;
         margin: 0 auto;
-        margin-top: 60px;
+        margin-top: 80px;
         text-align: center;
     }
     .aaas-img {
@@ -353,18 +361,26 @@ p {
         align-items: flex-start;
         #carousel-prev, #carousel-next {
             border: solid 1px transparent;
-            max-width: 20px;
-            width: 20px;
+            max-width: 30px;
+            width: 30px;
             height: 65px;
+            line-height: 65px;
             font-weight: 500;
             font-size: 48px;
             color: grey;
             background-color: white;
             cursor: pointer;
             padding: 0;
+            text-align: center;
+        }
+        #carousel-prev {
+            margin-right: 60px;
+        }
+        #carousel-next {
+            margin-left: 60px;
         }
         #brand-carousel {
-            width: calc(100% - 40px) !important;
+            width: calc(100% - 180px) !important;
         }
         .owl-item {
             display: flex;
@@ -402,7 +418,7 @@ p {
             font-size: 32px;
             text-align: center;
             margin: 0 auto;
-            margin-bottom: 30px;
+            margin-bottom: 130px;
         }
         .company-ads {
             margin-bottom: 50px;
@@ -475,6 +491,7 @@ p {
     }
 
     .other-product {
+        width: 100%;
         font-weight: 500;
         font-size: 24px;
         margin: 0 auto;
@@ -482,12 +499,15 @@ p {
         margin-bottom: 40px;
     }
     .otherprod-imgs {
+
         margin-bottom: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 0 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 60px;
+
         .ad-marketplace {
-            width: 48%;
+            max-width: 760px;
             background-image: url('../assets/imgs/img-bg-marketplace-ads.png');
             background-size: cover;
             background-position: center center;
@@ -497,46 +517,49 @@ p {
             align-items: center;
 
             .ad-marketplace-visit {
-                width: 75%;
+                width: calc(100% - 202px);
                 height: 100%;
-                padding: 10px;
+                padding: 0 10px 0 25px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 align-items: flex-start;
 
                 .ad-marketplace-visit-alumni {
                     width: 100%;
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     align-items: center;
 
                     .ad-marketplace-alumni-logo {
-                        margin: 5px 10px 10px 0;
+                        margin-bottom: 5px;
                     }
+
                     .visit-btn{
                         background-color: transparent;
                         border: solid 1px white;
                         border-radius: 4px;
-                        height: 50px;
-                        width: 300px;
+                        height: 51px;
+                        width: 298px;
                         color: white;
                         font-weight: 300;
                         font-size: 17px;
+                        margin-bottom: 5px;
                     }                    
                 }
                 .ad-marketplace-visit-quiz {
                     font-family: 'BentonSans_Book';
-                    font-size: 24px;
+                    font-size: 30px;
                     color: white;
                     margin: 0;
+                    text-align: justify;
 
                     @media all and (max-width: 1440px) {
-                        font-size: 24px;
+                        font-size: 22px;
                     }
                     @media all and  (max-width: 490px) {
-                        text-align: center;
+                        text-align-last: center;
                     }
                 }
                 @media all and (max-width: 490px) {
@@ -549,7 +572,8 @@ p {
                 }
             }
             .ad-marketplace-ipad {
-                width: 25%;
+                max-width: 202px;
+                width: 202px;
                 img {
                     position: relative;
                     width: 100%;
@@ -564,46 +588,65 @@ p {
         }
         .ad-gigs {
             position: relative;
-            width: 48%;
-            background-color: #f3f3f5;
+            max-width: 760px;
+            height: 267px;
+            background-image: url(../assets/imgs/img-bg-gigs.jpg);
             background-size: cover;
             background-position: center center;
-            height: 267px;
-            >img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                overflow: hidden;
-            }
-            .stripe-bg {
-                position: absolute;
-                background-image: url("../assets/imgs/bg-stripe.png");
-                background-position: center center;
-                background-size: cover;
-                height: 50px;
-                width: 100%;
-                margin-top: -25px;
-                z-index: 1;
-            }
+
             .visit-gigs-btn {
                 position: relative;
-                width: 230px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
                 height: 50px;
-                border: solid 1px white;
-                border-radius: 4px;
-                font-family: 'Lato';
-                font-weight: 300;
-                font-size: 17px;
-                color: white;
-                background-color: rgb(5, 166, 230);
-                margin-top: -50px;
-                margin-left: calc(50% - 115px);
-                z-index: 2;
+                >div {
+                    width: 230px;
+                    height: 50px;
+                    line-height: 50px;
+                    border: solid 1px white;
+                    border-radius: 4px;
+                    font-family: 'Lato';
+                    font-weight: 300;
+                    font-size: 17px;
+                    color: white;
+                    background-color: rgb(5, 166, 230);
+                    text-align: center;
+                    z-index: 5;
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../assets/imgs/bg-gigs-before.png);
+                    background-size: cover;
+                    background-position: right;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 50px;
+                    z-index: 4;
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../assets/imgs/bg-gigs-after.png);
+                    background-size: cover; 
+                    top: 0;
+                    left: 50%;
+                    width: 50%;
+                    height: 50px;
+                    z-index: 4;
+                }
+            }
+            .visit-gigs-bottom {
+                width: 100%;
+                margin-top: -25px;
+                height: calc(267px - 180px - 50px + 25px);
+                background-color: #f3f3f5;
             }
             .gigs-logo-area {
-                position: absolute;
-                top: 0;
-                left: 0;
                 width: 100%;
                 height: 180px;
                 display: flex;
@@ -631,7 +674,7 @@ p {
                     width: 60%;
                     font-family: 'Lato';
                     font-weight: 300;
-                    font-size: 16px;
+                    font-size: 22px;
                     color: white;
                     border-left: solid 1px white;
                     display: flex;
@@ -640,6 +683,9 @@ p {
                     >p {
                         width: 80%;
                         margin: 0;
+                    }
+                    @media all and (max-width: 1600px) {
+                        font-size: 16px;
                     }
                     @media all and (max-width: 490px) {
                         width: 100%;
@@ -659,18 +705,23 @@ p {
             }
         }
 
-        @media all and (max-width: 1024px) {
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 0 10px;
-            .ad-marketplace {
-                width: 100%;
-                margin-bottom: 50px;
-            }
-            .ad-gigs {
-                width: 100%;
+        @media all and (max-width: 1920px) {
+            .ad-marketplace, .ad-gigs {
+                max-width: 820px;
             }
         }
+        @media all and (max-width: 1800px) {
+            .ad-marketplace, .ad-gigs {
+                max-width: 760px;
+            }
+        }
+        @media all and (max-width: 1440px) {
+            padding: 0 60px;
+            grid-column-gap: 30px;
+            .ad-marketplace, .ad-gigs {
+                max-width: 645px;
+            }
+        }        
     }
     .contact-panel {
         padding: 125px 0;
