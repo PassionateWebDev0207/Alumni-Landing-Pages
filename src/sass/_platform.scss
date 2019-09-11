@@ -34,7 +34,6 @@ p {
 }
 
 .header {
-    min-height: 100vh;
     z-index: 999999 !important;
     #scrollnav {
         visibility: hidden;
@@ -89,12 +88,12 @@ p {
         }
     }
     .ipad-intro {
+        padding-bottom: 50px;
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-template-rows: 1fr;
         grid-column-gap: 100px;
         width: 100%;
-        min-height: calc(100vh - 100px);
 
         .ipad-img {
             display: flex;
@@ -132,9 +131,11 @@ p {
 }
 
 .mainbody {
+    background-color: #f3f3f5;
+    padding-top: 70px;
     .enterprise-quiz {
         margin: 0 auto;
-        margin-top: 72px;
+        max-width: 618px !important;
         font-weight: 500;
         font-size: 34px;
         text-align: center;
@@ -149,6 +150,8 @@ p {
     }
 
     .enterprise-properties {
+        background-color: white;
+        border-bottom: 10px solid white;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -169,9 +172,12 @@ p {
 
             .property-title {
                 font-weight: 500;
-                font-size: 36px;
-                @media all and (max-width: 576px) {
+                font-size: 42px;
+                @media all and (max-width: 1200px) {
                     font-size: 30px;
+                } 
+                @media all and (max-width: 991px) {
+                    font-size: 42px;
                 } 
             }
             .property-content {
@@ -189,7 +195,7 @@ p {
             background-image: url(../assets/imgs/communication.png);
         }
 
-        @media all and (max-width: 1024px) {
+        @media all and (max-width: 991px) {
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr;
             grid-column-gap: 0;
@@ -203,20 +209,26 @@ p {
 
     .video-panel {
         width: 100%;
-        padding: 80px 0 50px 0;
+        padding: 80px 40px 50px 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-column-gap: 40px;
         .video-player {
             display: flex;
             flex-direction: column; 
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
+            padding: 40px 40px 0 40px;
             .video-lnktext {
                 margin: 0;
                 font-weight: 500;
                 font-size: 29px;
+                @media all and (max-width: 1023px) {
+                    font-size: 24px;
+                }
+                @media all and (max-width: 991px) {
+                    font-size: 20px;
+                }
             }
             video {
                 width: 100%;
@@ -233,6 +245,9 @@ p {
                 overflow: hidden;
                 width: 100%;
             }
+            @media all and (max-width: 1600px) {
+                padding: 0;
+            }
         }
         .idevices {
             display: flex;
@@ -245,20 +260,30 @@ p {
             }            
         }
 
-        @media all and (max-width: 768px) {
-            padding: 40px 0 15px 0;
-            flex-direction: column;
+        @media all and (max-width: 991px) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 30px;
+
             .video-player {
                 width: 100%;
             }
             .idevices {
-                margin-top: 30px;
                 width: 100%;
             }
+        }
+
+        @media all and (min-width: 1600px) {
+            grid-column-gap: 0;
+            max-width: 100% !important;
+            padding-left: 40px;
+            padding-right: 40px;
         }
     }
 
     .why-panel {
+        border-top: 10px solid white;
         background-image: url(../assets/imgs/whypanel.png);
         background-size: cover;
         background-position: center center;
@@ -275,11 +300,13 @@ p {
             }
         }
         .why-text {
+            margin: 0 auto;
             margin-bottom: 55px;
             text-align: center;
             color: white;
             font-weight: 500;
             font-size: 34px;
+            max-width: 894px;
         }
         
         .item {
@@ -314,11 +341,16 @@ p {
         }
     }
 
+    .white-space {
+        background-color: white;
+        padding: 75px 0;
+    }
     .which-text {
         font-size:  34px;
         font-weight: 500;
         text-align: center;
-        margin-top: 75px;
+        margin: 0 auto;
+        max-width: 984px;
     }
 
     .which-text-ans {
@@ -332,7 +364,6 @@ p {
         margin-top: 50px;
         max-width: 1224px !important;
     }
-
     .aaas {
         font-weight: 500;
         font-size: 24px;
@@ -391,7 +422,6 @@ p {
     
     .learnmore-container {
         margin-top: 60px;
-        margin-bottom: 75px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -411,14 +441,14 @@ p {
 
     .ads-panel {
         padding: 75px 0 50px 0;
-        margin-bottom: 55px;
         background-color: #f3f3f5;
         .who-quiz {
             font-weight: 500;
-            font-size: 32px;
+            font-size: 31px;
             text-align: center;
             margin: 0 auto;
             margin-bottom: 130px;
+            max-width: 920px;
         }
         .company-ads {
             margin-bottom: 50px;
@@ -462,7 +492,7 @@ p {
                         color: black;
                         img {
                             position: absolute;
-                            bottom: -5px;
+                            bottom: 0px;
                             margin-left: 10px;
                         }
                     }
@@ -481,7 +511,7 @@ p {
                 }
             }
         
-            @media all and (max-width: 1024px) {
+            @media all and (max-width: 991px) {
                 padding: 0px 10px;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
@@ -489,7 +519,10 @@ p {
             }
         }
     }
-
+    .white-space-second {
+        background-color: white;
+        padding-top: 55px;
+    }
     .other-product {
         width: 100%;
         font-weight: 500;
@@ -499,7 +532,6 @@ p {
         margin-bottom: 40px;
     }
     .otherprod-imgs {
-
         margin-bottom: 100px;
         padding: 0 120px;
         display: grid;
@@ -534,6 +566,13 @@ p {
 
                     .ad-marketplace-alumni-logo {
                         margin-bottom: 5px;
+                        @media all and (max-width: 1199px) {
+                            img {
+                                width: 80%;
+                                object-fit: cover;
+                                overflow: hidden;    
+                            }
+                        }
                     }
 
                     .visit-btn{
@@ -546,6 +585,11 @@ p {
                         font-weight: 300;
                         font-size: 17px;
                         margin-bottom: 5px;
+                        @media all and (max-width: 1199px) {
+                            font-size: 15px;
+                            width: 210px;
+                            height: 40px;
+                        }
                     }                    
                 }
                 .ad-marketplace-visit-quiz {
@@ -553,13 +597,18 @@ p {
                     font-size: 30px;
                     color: white;
                     margin: 0;
-                    text-align: justify;
 
                     @media all and (max-width: 1440px) {
                         font-size: 22px;
                     }
+                    @media all and (max-width: 1199px) {
+                        font-size: 19px;
+                    }
+                    @media all and (max-width: 991px) {
+                        font-size: 22px;
+                    }
                     @media all and  (max-width: 490px) {
-                        text-align-last: center;
+                        text-align: center;
                     }
                 }
                 @media all and (max-width: 490px) {
@@ -721,76 +770,105 @@ p {
             .ad-marketplace, .ad-gigs {
                 max-width: 645px;
             }
-        }        
+        }
+        @media all and (max-width: 1199px) {
+            padding: 0 15px;
+            grid-column-gap: 20px;
+            .ad-marketplace, .ad-gigs {
+                max-width: 575px;
+            }
+        }
+        @media all and (max-width: 991px) {
+            padding: 0 120px;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 30px;
+            .ad-marketplace, .ad-gigs {
+                max-width: 760px;
+            }
+        }
     }
+    
     .contact-panel {
         padding: 125px 0;
-        .contact-left {
-            padding: 40px 0;
-            padding-right: 40px;
-            border-right: solid 2px white;
-            p {
-                margin: 0;
-                text-align: right;
-                color: white;
-                font-weight: 500;
-                font-size: 46px;
-            }
-            @media all and (max-width: 1024px) {
-                padding: 0;
-                padding-bottom: 20px;
-                border-right: none;
-                border-bottom: solid 2px white;
-                &>p {
-                    font-size: 30px;
-                    text-align: center;
-                }
-            }
-        }
-        .contact-right {
-            padding: 40px 0;
-            padding-left: 40px;
-            .input-container {
-                max-width: 425px;
-                width: 100%;
-                .contact-input {
-                    margin: 5px 0 ;
-                    font-weight: 300;
-                    font-size: 16px;
-                    width: 100%;
-                    height: 45px;
-                    border: solid 2px white;
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 0;
+            .contact-left {
+                padding: 40px 0;
+                padding-right: 40px;
+                border-right: solid 2px white;
+                p {
+                    margin: 0;
+                    text-align: right;
                     color: white;
-                    border-radius: 4px;
-                    background-color: rgba(0, 0, 0, .1);
-                    padding-left: 15px;
-                    &::placeholder {
-                        color: white;
+                    font-weight: 500;
+                    font-size: 46px;
+                }
+                @media all and (max-width: 991px) {
+                    padding: 0;
+                    padding-bottom: 20px;
+                    border-right: none;
+                    border-bottom: solid 2px white;
+                    &>p {
+                        font-size: 30px;
+                        text-align: center;
                     }
                 }
-                .contact-btn {
-                    margin-top: 15px;
-                    width: 150px;
-                    height: 55px;
-                    color: white;
-                    border: solid 2px white;
-                    border-radius: 4px;
-                    font-weight: 300;
-                    font-size: 20px;
-                    background-color: rgb(5, 166, 230);
-                    cursor: pointer;
+            }
+            .contact-right {
+                padding: 40px 0;
+                padding-left: 40px;
+                .input-container {
+                    max-width: 425px;
+                    width: 100%;
+                    .contact-input {
+                        margin: 5px 0 ;
+                        font-weight: 300;
+                        font-size: 16px;
+                        width: 100%;
+                        height: 45px;
+                        border: solid 2px white;
+                        color: white;
+                        border-radius: 4px;
+                        background-color: rgba(0, 0, 0, .1);
+                        padding-left: 15px;
+                        &::placeholder {
+                            color: white;
+                        }
+                    }
+                    .contact-btn {
+                        margin-top: 15px;
+                        width: 150px;
+                        height: 55px;
+                        color: white;
+                        border: solid 2px white;
+                        border-radius: 4px;
+                        font-weight: 300;
+                        font-size: 20px;
+                        background-color: rgb(5, 166, 230);
+                        cursor: pointer;
+                    }
+                }
+                @media all and (max-width: 991px) {
+                    padding: 0;
+                    padding-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
                 }
             }
-            @media all and (max-width: 1024px) {
-                padding: 0;
-                padding-top: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            @media all and (max-width: 991px) {
+                grid-template-rows: auto auto;
+                grid-template-columns: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
             }
         }
-        @media all and (max-width: 1024px) {
-            padding: 50px 0;
+        @media all and (max-width: 991px) {
+            padding: 40px 0;   
         }
     }
     .proud-panel {
@@ -801,7 +879,7 @@ p {
         text-align: center;
     }
     .sap-imgs {
-        margin-bottom: 65px;
+        padding-bottom: 65px;
         display: flex;
         justify-content: center;
         align-items: center;
