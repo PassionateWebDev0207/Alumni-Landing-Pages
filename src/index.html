@@ -32,7 +32,7 @@
                         <a class="nav-link" href="#">2017 Alumni Survey</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -59,11 +59,32 @@
                         <a class="nav-link" href="#">2017 Alumni Survey</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="modal fade" id="contact-modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="close" data-dismiss="modal"><i class="fa fa-times"></i></div>
+                        <p class="modal-hd-title-1">Contact Us...</p>
+                        <p class="modal-hd-title-2">Fill in the details below and we will be<br/> in touch as soon as possible.</p>
+                    </div>
+                    <div class="modal-body">
+                        <div><input type="text" placeholder="Your Name" /></div>
+                        <div><input type="text" placeholder="Company" /></div>
+                        <div><input type="text" placeholder="Company Email" /></div>
+                        <div><input type="text" placeholder="Telephone" /></div>
+                        <button type="button">Submit&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+                        <p>All fields are mandatory</p>
+                    </div>
+                    <div class="modal-footer" style="display: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container syssrv-notification">
             <div class="setting-logo"><img src="./assets/imgs/img-ico-setting.png"/></div>
             <h1 class="setting-title">SYSTEM SERVICE NOTIFICATIONS</h1>
