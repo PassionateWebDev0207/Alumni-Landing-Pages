@@ -65,7 +65,7 @@ p {
         width: 100%;
         padding: 10px 40px;
         height: 100px;
-        @media all and (max-width: 375px) {
+        @media all and (max-width: 575px) {
             padding: 10px 10px;
         }
     }
@@ -127,6 +127,12 @@ p {
                     width: 100%;
                     font-size: 72px;
                     text-align: center;
+                }
+                @media all and (max-width: 575px) {
+                    font-size: 48px;
+                }
+                @media all and (max-width: 420px) {
+                    font-size: 36px;
                 }
             }
             :nth-child(2) {
@@ -196,6 +202,9 @@ p {
                 @media all and (max-width: 991px) {
                     font-size: 42px;
                 } 
+                @media all and (max-width: 374px) {
+                    font-size: 30px;
+                }
             }
             .property-content {
                 font-weight: 300;
@@ -203,6 +212,9 @@ p {
             }
             @media all and (max-width: 991px) {
                 padding: 10% 40px;
+            }
+            @media all and (max-width: 767px) {
+                padding: 15px 15px;
             }
         }
         .integrations {
@@ -216,8 +228,7 @@ p {
         }
 
         @media all and (max-width: 991px) {
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns: 1fr;
+            grid-template-columns: auto;
             grid-column-gap: 0;
             grid-row-gap: 10px;
             .enterprise-property {
@@ -228,6 +239,15 @@ p {
                 margin-bottom: 5px;
             }
         }
+        @media all and (max-width: 374px) {
+            .enterprise-property {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 374px;
+                margin-bottom: 5px;
+            }
+        }        
     }
 
     .video-panel {
@@ -248,6 +268,9 @@ p {
                 font-size: 29px;
                 @media all and (max-width: 1023px) {
                     font-size: 24px;
+                }
+                @media all and (max-width: 767px) {
+                    font-size: 20px;
                 }
             }
             video {
@@ -300,6 +323,9 @@ p {
             padding-left: 40px;
             padding-right: 40px;
         }
+        @media all and (max-width: 575px) {
+            padding: 15px;
+        }        
     }
 
     .why-panel {
@@ -334,7 +360,7 @@ p {
             padding: 0 30px;
             margin: 25px 0;
             @media all and (max-width: 767px) {
-                margin: 5px;
+                margin: 5px 0;
             }
         }
 
@@ -799,7 +825,17 @@ p {
             }
         }
         @media all and (max-width: 991px) {
-            padding: 0 120px;
+            padding: 0 60px;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 30px;
+            .ad-marketplace, .ad-gigs {
+                max-width: 760px;
+            }
+        }
+        @media all and (max-width: 767px) {
+            padding: 0 15px;
             grid-template-columns: 1fr;
             grid-column-gap: 0;
             grid-template-rows: 1fr 1fr;
@@ -907,7 +943,7 @@ p {
             margin: 0 20px;
         }
 
-        @media all and (max-width: 576px) {
+        @media all and (max-width: 575px) {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
@@ -990,7 +1026,7 @@ p {
             }
         }
 
-        @media all and (max-width: 576px) {
+        @media all and (max-width: 575px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -1000,7 +1036,7 @@ p {
         }
     }
     
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         height: 140px;
         flex-direction: column;
         justify-content: space-evenly;
