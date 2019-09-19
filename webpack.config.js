@@ -86,13 +86,17 @@ module.exports = (env, options) => ({
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css"
     }),
-    new CleanWebpackPlugin(["dist"]),
-    ...globSync("src/**/*.html").map(fileName => {
-      return new HtmlWebpackPlugin({
-        template: fileName,
-        inject: "body",
-        filename: fileName.replace("src/", "")
-      });
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin(
+      [{ from: Path.resolve(__dirname, './src'), to: 'src' }]
+    ),  
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/integrations.html',
+      filename: 'integrations.html',
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
