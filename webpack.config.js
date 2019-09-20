@@ -87,9 +87,6 @@ module.exports = (env, options) => ({
       filename: "css/[name].[contenthash].css"
     }),
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin(
-      [{ from: Path.resolve(__dirname, './src'), to: 'src' }]
-    ),  
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
@@ -97,6 +94,22 @@ module.exports = (env, options) => ({
     new HtmlWebpackPlugin({
       template: './src/integrations.html',
       filename: 'integrations.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/service.html',
+      filename: 'service.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/competitors.html',
+      filename: 'competitors.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/blog.html',
+      filename: 'blog.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/blogpost.html',
+      filename: 'blogpost.html',
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -107,6 +120,11 @@ module.exports = (env, options) => ({
       Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
     })
   ],
+  resolve: {
+      alias: {
+        '~': path.resolve(__dirname, '../src')
+      }
+  },
   optimization: {
     minimizer: [
         new UglifyJsPlugin({

@@ -8,6 +8,60 @@
     <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
 </head>
 <body class="platform-page">
+    <nav class="navbar navbar-expand-lg" id="scrollnav">        
+        <div class="navbar-brand">
+            <img class="logo-image" src="./assets/imgs/img-logo-sticky.png" alt="logo">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse1" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" style="color:black;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+            <ul class="navbar-nav ml-auto">                    
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="competitors.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="integrations.html">Integrations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">2017 Alumni Survey</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal-outer">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="contact-modal-outer" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="close" data-dismiss="modal"><i class="fa fa-times"></i></div>
+                    <p class="modal-hd-title-1">Contact Us...</p>
+                    <p class="modal-hd-title-2">Fill in the details below and we will be<br/> in touch as soon as possible.</p>
+                </div>
+                <div class="modal-body">
+                    <div><input type="text" placeholder="Your Name" /></div>
+                    <div><input type="text" placeholder="Company" /></div>
+                    <div><input type="text" placeholder="Company Email" /></div>
+                    <div><input type="text" placeholder="Telephone" /></div>
+                    <button type="button">Submit&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+                    <p>All fields are mandatory</p>
+                </div>
+                <div class="modal-footer" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
     <header data-jarallax data-speed="0.2" class="header jarallax">
         <img class="jarallax-img" src="./assets/imgs/hero-back.png"/>
         <nav class="navbar navbar-expand-lg" id="originnav">        
@@ -20,46 +74,25 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="competitors.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Integrations</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">2017 Alumni Survey</a>
+                        <a class="nav-link" href="service.html">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg" id="scrollnav">        
-            <div class="navbar-brand">
-                <img class="logo-image" src="./assets/imgs/img-logo-sticky.png" alt="logo">
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse1" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars" style="color:black;"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Integrations</a>
+                        <a class="nav-link" href="integrations.html">Integrations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">2017 Alumni Survey</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal-outer">Contact</a>
                     </li>
                 </ul>
             </div>

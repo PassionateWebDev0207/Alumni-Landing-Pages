@@ -46,7 +46,7 @@ $(document).ready(function() {
 		if (sticky == 0) {
 			sticky = 100;
 		}
-		if (window.pageYOffset >= sticky /*&& window.innerWidth > 991*/) {
+		if (window.pageYOffset >= sticky) {
 			document.getElementById("scrollnav").style.visibility = 'visible';
 			document.getElementById("scrollnav").style.zIndex = '999999';
 		} else {
